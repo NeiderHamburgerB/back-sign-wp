@@ -7,7 +7,7 @@ export const databaseConfig = (): PostgresConnectionOptions => ({
   username: process.env.POSTGRES_USER || 'root',
   password: process.env.POSTGRES_PASSWORD || 'root',
   database: process.env.POSTGRES_DATABASE || 'wompiDev',
-  //ssl: ''//process.env.POSTGRES_SSL === 'true',
+  ssl: false,
   entities: [__dirname + '/../modules/**/entities/*.entity{.ts,.js}'],
   synchronize: true,
   migrations: [__dirname + '../migrations/**/*.{.ts,.js}'],
